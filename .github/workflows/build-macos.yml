@@ -17,7 +17,7 @@ jobs:
         - name: Build
           run: |
              cp examples/CMakePresets.json .
-             export Qt5_DIR=/opt/homebrew/opt/qt@5
+             export QT_DIR=/opt/homebrew/opt/qt@5
              cmake .
     
         - name: Archive production artifacts
