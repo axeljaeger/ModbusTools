@@ -14,7 +14,7 @@ jobs:
             brew install qt5
         - name: Build
           run: |
-             cp examples/CMakeLists.txt .
+             cp examples/CMakePresets.json .
              export Qt5_DIR=/opt/homebrew/opt/qt@5
              cmake .
     
