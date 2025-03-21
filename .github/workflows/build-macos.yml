@@ -16,10 +16,10 @@ jobs:
             brew install qt5
         - name: Build
           env:
-            Qt5_DIR: "/opt/homebrew/opt/qt@5/lib/cmake/Qt5"
+            QT_DIR: "/opt/homebrew/opt/qt@5"
           run: |
              cp examples/CMakePresets.json .
-             echo "Qt cmake: $Qt5_DIR"
+             echo "QT_DIR: $QT_DIR"
              ls /opt/homebrew/opt/qt@5/lib/cmake/Qt5/Qt5Config.cmake
              cmake .
     
