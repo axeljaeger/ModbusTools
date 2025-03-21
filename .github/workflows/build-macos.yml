@@ -15,9 +15,10 @@ jobs:
           run: |
             brew install qt5
         - name: Build
+          env:
+            Qt5_DIR: "/opt/homebrew/opt/qt@5/lib/cmake/Qt5"
           run: |
              cp examples/CMakePresets.json .
-             export Qt5_DIR=/opt/homebrew/opt/qt@5/lib/cmake/Qt5
              cmake .
     
         - name: Archive production artifacts
