@@ -132,6 +132,10 @@ set_target_properties(
              SOVERSION ${PROJECT_VERSION_MAJOR}
              WIN32_EXECUTABLE true)
 
+set_target_properties(${MBTOOLS_CLIENT_APP_NAME} PROPERTIES
+             MACOSX_BUNDLE TRUE
+         )
+
 target_link_libraries(
   ${MBTOOLS_CLIENT_APP_NAME}
   PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::Gui
