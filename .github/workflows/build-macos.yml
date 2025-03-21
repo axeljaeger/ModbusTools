@@ -15,6 +15,7 @@ jobs:
         - name: Build
           run: |
              cp examples/CMakeLists.txt .
+             export Qt5_DIR=/opt/homebrew/opt/qt@5
              cmake .
     
         - name: Archive production artifacts
