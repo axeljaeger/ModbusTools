@@ -20,10 +20,9 @@ jobs:
             Qt5_DIR: "/opt/homebrew/opt/qt@5/lib/cmake/Qt5"
           run: |
              cp examples/CMakePresets.json .
-             echo "QT_DIR: $QT_DIR"
-             ls /opt/homebrew/opt/qt@5/lib/cmake/Qt5/Qt5Config.cmake
              cmake .
              make -j 2
+             /opt/homebrew/opt/qt@5/bin/macdeployqt client.app
              sh patch-paths.sh
     
         - name: Archive production artifacts
